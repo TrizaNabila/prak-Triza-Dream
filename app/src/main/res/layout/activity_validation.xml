@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Konfirmasi Data Registrasi"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:layout_marginBottom="24dp" />
+
+    <TextView android:id="@+id/tvHasilNama" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="16sp" android:layout_marginBottom="8dp" android:text="Nama: "/>
+    <TextView android:id="@+id/tvHasilEmail" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="16sp" android:layout_marginBottom="8dp" android:text="Email: "/>
+    <TextView android:id="@+id/tvHasilTglLahir" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="16sp" android:layout_marginBottom="8dp" android:text="Tgl Lahir: "/>
+    <TextView android:id="@+id/tvHasilGender" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="16sp" android:layout_marginBottom="8dp" android:text="Jenis Kelamin: "/>
+    <TextView android:id="@+id/tvHasilUsername" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="16sp" android:layout_marginBottom="24dp" android:text="Username: "/>
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SUBMIT"
+        android:backgroundTint="#6200EE"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/btnKembali"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kembali Ke Form"
+        android:backgroundTint="#E0E0E0"
+        android:textColor="#333333"/>
+
+</LinearLayout>
