@@ -5,15 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/bg_form_bina_desa"
+    android:background="@color/pink_background"
     tools:context=".About.AboutFragment">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#6200EE"
-        app:title="Tentang Triza Bansos"
+        android:background="@color/pink_primary"
+        app:title="Tentang Triza Bansos ✨"
         app:titleTextColor="@android:color/white"
         app:elevation="4dp" />
 
@@ -45,18 +45,18 @@
                 android:text="Triza Bansos Kemensos"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:textColor="#6200EE"
+                android:textColor="@color/pink_secondary_variant"
                 android:layout_marginTop="12dp" />
         </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Daftar Layanan Aplikasi (ListView)"
+            android:text="Daftar Layanan Aplikasi"
             android:textStyle="bold"
             android:textSize="16sp"
             android:layout_marginBottom="8dp"
-            android:textColor="@color/black" />
+            android:textColor="@color/pink_secondary_variant" />
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -70,7 +70,7 @@
                 android:id="@+id/lv_fitur_utama"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:divider="#EEEEEE"
+                android:divider="#FCE4EC"
                 android:dividerHeight="1dp"
                 android:padding="8dp" />
         </androidx.cardview.widget.CardView>
@@ -78,7 +78,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/edit_text_bg_estetik"
+            android:background="@drawable/bg_card_menu"
             android:padding="12dp"
             android:orientation="horizontal">
 
@@ -87,23 +87,23 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Versi Aplikasi"
-                android:textColor="#888888" />
+                android:textColor="@color/gray_text" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.0.0 (Bansos P8)"
+                android:text="1.0.0 (Bansos P14)"
                 android:textStyle="bold"
-                android:textColor="#6200EE" />
+                android:textColor="@color/pink_primary" />
         </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Copyright © 2026 Triza Dream Development"
+            android:text="Copyright © 2026 Triza Dream Development 💖"
             android:gravity="center"
             android:layout_marginTop="16dp"
-            android:textColor="#777777"
+            android:textColor="@color/pink_secondary_variant"
             android:textSize="11sp" />
 
     </LinearLayout>

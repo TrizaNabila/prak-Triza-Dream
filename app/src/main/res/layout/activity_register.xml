@@ -5,57 +5,98 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp"
+    android:background="@color/pink_background"
     tools:context=".RegisterActivity">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="32dp"
+            android:gravity="center_horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Form Registrasi"
-                android:textSize="24sp"
+                android:text="Form Registrasi ✨"
+                android:textSize="26sp"
                 android:textStyle="bold"
-                android:layout_gravity="center"
                 android:layout_marginBottom="24dp"
-                android:textColor="@color/black" />
+                android:textColor="@color/pink_secondary_variant" />
 
-            <EditText
-                android:id="@+id/etNama"
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
                 android:hint="Nama Lengkap"
-                android:inputType="textPersonName"
-                android:layout_marginBottom="12dp" />
+                app:boxStrokeColor="@color/pink_primary"
+                app:hintTextColor="@color/pink_primary"
+                app:boxCornerRadiusBottomEnd="15dp"
+                app:boxCornerRadiusBottomStart="15dp"
+                app:boxCornerRadiusTopEnd="15dp"
+                app:boxCornerRadiusTopStart="15dp">
 
-            <EditText
-                android:id="@+id/etEmail"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etNama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
                 android:hint="Email"
-                android:inputType="textEmailAddress"
-                android:layout_marginBottom="12dp" />
+                app:boxStrokeColor="@color/pink_primary"
+                app:hintTextColor="@color/pink_primary"
+                app:boxCornerRadiusBottomEnd="15dp"
+                app:boxCornerRadiusBottomStart="15dp"
+                app:boxCornerRadiusTopEnd="15dp"
+                app:boxCornerRadiusTopStart="15dp">
 
-            <EditText
-                android:id="@+id/etTanggalLahir"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
                 android:hint="Tanggal Lahir"
-                android:focusable="false"
-                android:clickable="true"
-                android:layout_marginBottom="12dp" />
+                app:boxStrokeColor="@color/pink_primary"
+                app:hintTextColor="@color/pink_primary"
+                app:boxCornerRadiusBottomEnd="15dp"
+                app:boxCornerRadiusBottomStart="15dp"
+                app:boxCornerRadiusTopEnd="15dp"
+                app:boxCornerRadiusTopStart="15dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etTanggalLahir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:clickable="true" />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Jenis Kelamin:"
+                android:textColor="@color/pink_secondary_variant"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp"
                 android:textSize="16sp" />
 
             <RadioGroup
@@ -69,46 +110,90 @@
                     android:id="@+id/rbLaki"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Laki-laki" />
+                    android:text="Laki-laki"
+                    android:buttonTint="@color/pink_primary"/>
 
                 <RadioButton
                     android:id="@+id/rbPerempuan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Perempuan"
-                    android:layout_marginStart="20dp" />
+                    android:layout_marginStart="20dp"
+                    android:buttonTint="@color/pink_primary"/>
             </RadioGroup>
 
-            <EditText
-                android:id="@+id/etUsername"
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
                 android:hint="Username"
-                android:layout_marginBottom="12dp" />
+                app:boxStrokeColor="@color/pink_primary"
+                app:hintTextColor="@color/pink_primary"
+                app:boxCornerRadiusBottomEnd="15dp"
+                app:boxCornerRadiusBottomStart="15dp"
+                app:boxCornerRadiusTopEnd="15dp"
+                app:boxCornerRadiusTopStart="15dp">
 
-            <EditText
-                android:id="@+id/etPassword"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
                 android:hint="Password"
-                android:inputType="textPassword"
-                android:layout_marginBottom="12dp" />
+                app:boxStrokeColor="@color/pink_primary"
+                app:hintTextColor="@color/pink_primary"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/pink_primary"
+                app:boxCornerRadiusBottomEnd="15dp"
+                app:boxCornerRadiusBottomStart="15dp"
+                app:boxCornerRadiusTopEnd="15dp"
+                app:boxCornerRadiusTopStart="15dp">
 
-            <EditText
-                android:id="@+id/etConfirmPassword"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
                 android:hint="Konfirmasi Password"
-                android:inputType="textPassword"
-                android:layout_marginBottom="24dp" />
+                app:boxStrokeColor="@color/pink_primary"
+                app:hintTextColor="@color/pink_primary"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/pink_primary"
+                app:boxCornerRadiusBottomEnd="15dp"
+                app:boxCornerRadiusBottomStart="15dp"
+                app:boxCornerRadiusTopEnd="15dp"
+                app:boxCornerRadiusTopStart="15dp">
 
-            <Button
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etConfirmPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnSelanjutnya"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Selanjutnya"
-                android:backgroundTint="#6200EE"
-                android:textColor="@android:color/white" />
+                android:layout_height="60dp"
+                android:text="Selanjutnya 💖"
+                app:cornerRadius="30dp"
+                android:backgroundTint="@color/pink_primary"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
 
         </LinearLayout>
     </ScrollView>

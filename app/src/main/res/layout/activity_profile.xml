@@ -1,70 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    android:padding="24dp"
-    android:background="#FFFFFF">
+    android:padding="32dp"
+    android:background="@color/pink_background">
 
-    <ImageView
-        android:id="@+id/imgProfile"
+    <androidx.cardview.widget.CardView
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_marginTop="40dp"
-        android:src="@mipmap/ic_launcher_round" />
+        app:cardCornerRadius="60dp"
+        app:cardElevation="4dp">
+        <ImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/abing"
+            android:scaleType="centerCrop"
+            android:contentDescription="Profile Image" />
+    </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/txtJudulDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="User Profile"
-        android:textSize="24sp"
+        android:text="User Profile ✨"
+        android:textSize="26sp"
         android:textStyle="bold"
-        android:textColor="#333333"
-        android:layout_marginTop="20dp" />
+        android:textColor="@color/pink_secondary_variant"
+        android:layout_marginTop="24dp" />
 
     <TextView
         android:id="@+id/txtDescDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Detail informasi akun"
+        android:text="Detail informasi akun kamu"
         android:textSize="16sp"
-        android:textColor="#757575"
+        android:textColor="@color/pink_primary"
         android:gravity="center"
         android:layout_marginTop="8dp" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#EEEEEE"
+        android:background="@color/pink_secondary"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="30dp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Status: Active"
-        android:textSize="14sp"
-        android:layout_marginBottom="8dp"/>
+        android:text="Status: Active 💖"
+        android:textSize="16sp"
+        android:textColor="@color/pink_secondary_variant"
+        android:layout_marginBottom="12dp"
+        android:textStyle="bold"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Member Since: 2024"
-        android:textSize="14sp" />
+        android:textColor="@color/pink_secondary_variant"
+        android:textSize="16sp" />
 
     <Space
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnBack"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:text="KEMBALI KE MENU"
-        android:backgroundTint="#6200EE"
-        android:textColor="#FFFFFF" />
+        android:backgroundTint="@color/pink_primary"
+        android:textColor="#FFFFFF"
+        app:cornerRadius="30dp"
+        android:textStyle="bold" />
 
 </LinearLayout>

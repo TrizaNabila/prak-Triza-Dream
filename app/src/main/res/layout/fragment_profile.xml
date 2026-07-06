@@ -5,15 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/bg_form_bina_desa"
+    android:background="@color/pink_background"
     tools:context=".Profile.ProfileFragment">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#6200EE"
-        app:title="Profil Pengembang"
+        android:background="@color/pink_primary"
+        app:title="Profil Pengembang ✨"
         app:titleTextColor="@android:color/white"
         app:elevation="4dp" />
 
@@ -40,13 +40,15 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:padding="20dp"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:background="@color/white">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         app:cardCornerRadius="50dp"
-                        app:cardElevation="0dp">
+                        app:cardElevation="0dp"
+                        app:cardBackgroundColor="@color/pink_background">
 
                         <ImageView
                             android:id="@+id/imgProfile"
@@ -60,10 +62,10 @@
                         android:id="@+id/txtDeveloperName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Ms. Triza Dream"
+                        android:text="Ms. Triza Dream 💖"
                         android:textSize="20sp"
                         android:textStyle="bold"
-                        android:textColor="#6200EE"
+                        android:textColor="@color/pink_secondary_variant"
                         android:layout_marginTop="12dp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -74,22 +76,25 @@
                 android:text="Update Info Pengguna:"
                 android:textStyle="bold"
                 android:layout_marginBottom="8dp"
-                android:textColor="#6200EE"/>
+                android:textColor="@color/pink_secondary_variant"/>
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Nama Lengkap"
+                app:boxStrokeColor="@color/pink_primary"
+                app:hintTextColor="@color/pink_primary"
                 app:boxCornerRadiusTopStart="15dp"
                 app:boxCornerRadiusBottomEnd="15dp"
                 android:layout_marginBottom="12dp"
-                app:startIconDrawable="@android:drawable/ic_menu_edit">
+                app:startIconDrawable="@android:drawable/ic_menu_edit"
+                app:startIconTint="@color/pink_primary">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/edit_text_bg_estetik" />
+                    android:background="@color/white" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -97,26 +102,29 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Nomor Identitas (NIK)"
+                app:boxStrokeColor="@color/pink_primary"
+                app:hintTextColor="@color/pink_primary"
                 app:boxCornerRadiusTopStart="15dp"
                 app:boxCornerRadiusBottomEnd="15dp"
                 android:layout_marginBottom="16dp"
-                app:startIconDrawable="@android:drawable/ic_dialog_info">
+                app:startIconDrawable="@android:drawable/ic_dialog_info"
+                app:startIconTint="@color/pink_primary">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="number"
-                    android:background="@drawable/edit_text_bg_estetik" />
+                    android:background="@color/white" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnUpdateProfile"
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:text="Simpan Perubahan"
+                android:layout_height="60dp"
+                android:text="Simpan Perubahan 🌸"
                 android:textSize="16sp"
-                app:cornerRadius="15dp"
-                android:backgroundTint="#6200EE"
+                app:cornerRadius="30dp"
+                android:backgroundTint="@color/pink_primary"
                 android:layout_marginBottom="24dp" />
 
             <LinearLayout
@@ -130,15 +138,15 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Informasi Akademik"
+                    android:text="Informasi Akademik ✨"
                     android:textStyle="bold"
-                    android:textColor="#6200EE" />
+                    android:textColor="@color/pink_primary" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Prodi : Sistem Informasi\nStatus : Mahasiswi Aktif\nProject : Triza Bansos P8"
-                    android:textColor="#546E7A"
+                    android:text="Prodi : Sistem Informasi\nStatus : Mahasiswi Aktif\nProject : Triza Dream App 1.0"
+                    android:textColor="@color/gray_text"
                     android:layout_marginTop="8dp"
                     android:lineSpacingExtra="4dp"/>
             </LinearLayout>

@@ -1,64 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@drawable/bg_form_bina_desa"
+    android:background="@color/pink_background"
     tools:context=".Home.HomeFragment">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="#6200EE"
-        app:title="Triza Bansos"
-        app:titleTextColor="@color/white"
-        app:elevation="4dp" />
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-    <ScrollView
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/pink_primary"
+            app:title="Triza Bansos ✨"
+            app:titleTextColor="@color/white"
+            app:elevation="4dp" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:padding="20dp">
 
             <ImageView
                 android:id="@+id/imgLogoMain"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:layout_gravity="center"
                 android:src="@drawable/logoo"
-                android:scaleType="centerInside" />
+                android:scaleType="centerInside"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
             <TextView
                 android:id="@+id/txtWelcome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Welcome, Ms. Triza"
+                android:text="Welcome, Ms. Triza 💖"
                 android:textSize="22sp"
                 android:textStyle="bold"
-                android:textColor="#6200EE"
-                android:layout_gravity="center"
-                android:layout_marginTop="12dp"/>
+                android:textColor="@color/pink_secondary_variant"
+                android:layout_marginTop="12dp"
+                app:layout_constraintTop_toBottomOf="@id/imgLogoMain"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
 
             <TextView
+                android:id="@+id/tvKategoriLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Kategori Bantuan:"
                 android:textStyle="bold"
+                android:textColor="@color/pink_secondary_variant"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="8dp"/>
+                app:layout_constraintTop_toBottomOf="@id/txtWelcome"
+                app:layout_constraintStart_toStartOf="parent"/>
 
             <com.google.android.material.chip.ChipGroup
                 android:id="@+id/chipGroupKategori"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:singleSelection="true">
+                android:layout_marginTop="8dp"
+                app:singleSelection="true"
+                app:selectionRequired="true"
+                app:layout_constraintTop_toBottomOf="@id/tvKategoriLabel">
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chipSemua"
@@ -66,7 +84,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Semua"
-                    app:chipBackgroundColor="@color/bg_chip_selected" />
+                    android:checked="true"
+                    android:checkable="true"
+                    android:textColor="@color/white"
+                    app:chipBackgroundColor="@color/pink_primary"/>
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chipPokok"
@@ -74,7 +95,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Sembako"
-                    app:chipBackgroundColor="@color/bg_chip_selected" />
+                    android:checkable="true"
+                    android:textColor="@color/pink_primary"
+                    app:chipStrokeColor="@color/pink_primary"
+                    app:chipStrokeWidth="1dp"/>
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chipTunai"
@@ -82,23 +106,31 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="BLT Tunai"
-                    app:chipBackgroundColor="@color/bg_chip_selected" />
+                    android:checkable="true"
+                    android:textColor="@color/pink_primary"
+                    app:chipStrokeColor="@color/pink_primary"
+                    app:chipStrokeWidth="1dp"/>
             </com.google.android.material.chip.ChipGroup>
 
             <TextView
+                android:id="@+id/tvLayananLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Menu Layanan Utama:"
                 android:textStyle="bold"
+                android:textColor="@color/pink_secondary_variant"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="12dp"/>
+                app:layout_constraintTop_toBottomOf="@id/chipGroupKategori"
+                app:layout_constraintStart_toStartOf="parent"/>
 
             <GridLayout
+                android:id="@+id/grid_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
                 android:columnCount="2"
                 android:alignmentMode="alignMargins"
-                android:columnOrderPreserved="false">
+                app:layout_constraintTop_toBottomOf="@id/tvLayananLabel">
 
                 <LinearLayout
                     android:id="@+id/menuKalkulator"
@@ -110,18 +142,21 @@
                     android:elevation="4dp"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="20dp">
+                    android:padding="20dp"
+                    android:clickable="true"
+                    android:focusable="true">
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:src="@android:drawable/ic_menu_edit"
-                        app:tint="#1565C0" />
+                        app:tint="@color/pink_primary" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Kalkulator"
                         android:layout_marginTop="8dp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:textColor="@color/pink_secondary_variant"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -134,18 +169,48 @@
                     android:elevation="4dp"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="20dp">
+                    android:padding="20dp"
+                    android:clickable="true"
+                    android:focusable="true">
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:src="@android:drawable/ic_menu_search"
-                        app:tint="#6200EE" />
+                        app:tint="@color/pink_primary" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Cek Data"
                         android:layout_marginTop="8dp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:textColor="@color/pink_secondary_variant"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/menuPertemuan10"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/bg_card_menu"
+                    android:elevation="4dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@android:drawable/ic_menu_agenda"
+                        app:tint="@color/pink_primary" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Layanan Info ✨"
+                        android:layout_marginTop="8dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/pink_secondary_variant"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -158,18 +223,75 @@
                     android:elevation="4dp"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="20dp">
+                    android:padding="20dp"
+                    android:clickable="true"
+                    android:focusable="true">
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:src="@android:drawable/ic_menu_gallery"
-                        app:tint="#FF5722" />
+                        app:tint="@color/pink_primary" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Edukasi"
                         android:layout_marginTop="8dp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:textColor="@color/pink_secondary_variant"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/menuNotification"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/bg_card_menu"
+                    android:elevation="4dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@android:drawable/ic_dialog_info"
+                        app:tint="@color/pink_primary" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Notifikasi"
+                        android:layout_marginTop="8dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/pink_secondary_variant"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/menuCameraQR"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/bg_card_menu"
+                    android:elevation="4dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@android:drawable/ic_menu_camera"
+                        app:tint="@color/pink_primary" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Camera &amp; QR"
+                        android:layout_marginTop="8dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/pink_secondary_variant"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -182,32 +304,101 @@
                     android:elevation="4dp"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="20dp">
+                    android:padding="20dp"
+                    android:clickable="true"
+                    android:focusable="true">
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:src="@android:drawable/ic_lock_power_off"
-                        app:tint="#D32F2F" />
+                        app:tint="@color/pink_secondary_variant" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Keluar"
                         android:layout_marginTop="8dp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:textColor="@color/pink_secondary_variant"/>
                 </LinearLayout>
 
             </GridLayout>
+
+            <TextView
+                android:id="@+id/tvCatFact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:text="Loading cat fact..."
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textColor="@color/pink_secondary_variant"
+                android:textStyle="italic"
+                app:layout_constraintTop_toBottomOf="@id/grid_button" />
+
+            <Button
+                android:id="@+id/btnRefresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Refresh Fact ✨"
+                android:backgroundTint="@color/pink_primary"
+                app:layout_constraintTop_toBottomOf="@id/tvCatFact"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/tvGalleryLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Daftar Foto (REST API):"
+                android:textStyle="bold"
+                android:textColor="@color/pink_secondary_variant"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@id/btnRefresh"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvGallery"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="8dp"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintTop_toBottomOf="@id/tvGalleryLabel" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnBantuan"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginTop="24dp"
-                android:text="Bantuan Darurat"
-                android:backgroundTint="#D32F2F"
+                android:text="Bantuan Darurat 🆘"
+                android:backgroundTint="@color/pink_secondary_variant"
                 app:cornerRadius="15dp"
-                app:icon="@android:drawable/ic_menu_call" />
+                app:icon="@android:drawable/ic_menu_call"
+                app:layout_constraintTop_toBottomOf="@id/rvGallery" />
 
-        </LinearLayout>
-    </ScrollView>
-</LinearLayout>
+            <TextView
+                android:id="@+id/tvRoomLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Daftar Penerima Bansos (Room):"
+                android:textStyle="bold"
+                android:textColor="@color/pink_secondary_variant"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@id/btnBantuan"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvBansos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintTop_toBottomOf="@id/tvRoomLabel"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

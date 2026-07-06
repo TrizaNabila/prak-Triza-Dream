@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="32dp"
+    android:gravity="center"
+    android:background="@color/pink_background">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@android:drawable/ic_dialog_info"
+        app:tint="@color/pink_primary"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hasil Notifikasi ✨"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/pink_secondary_variant" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Halo! Kamu telah diarahkan ke halaman ini setelah mengklik notifikasi pengingat. 💖"
+        android:gravity="center"
+        android:textColor="@color/pink_secondary_variant"
+        android:textSize="16sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Kembali"
+        android:backgroundTint="@color/pink_primary"
+        app:cornerRadius="30dp"
+        android:onClick="finish" />
+
+</LinearLayout>

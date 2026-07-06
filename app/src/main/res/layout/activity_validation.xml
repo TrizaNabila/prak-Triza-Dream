@@ -1,42 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="24dp"
-    android:background="#FFFFFF">
+    android:padding="32dp"
+    android:gravity="center_horizontal"
+    android:background="@color/pink_background">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Konfirmasi Data Registrasi"
-        android:textSize="22sp"
+        android:text="Konfirmasi Data ✨"
+        android:textSize="24sp"
         android:textStyle="bold"
-        android:textColor="#333333"
-        android:layout_marginBottom="24dp" />
+        android:textColor="@color/pink_secondary_variant"
+        android:layout_marginBottom="32dp" />
 
-    <TextView android:id="@+id/tvHasilNama" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="16sp" android:layout_marginBottom="8dp" android:text="Nama: "/>
-    <TextView android:id="@+id/tvHasilEmail" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="16sp" android:layout_marginBottom="8dp" android:text="Email: "/>
-    <TextView android:id="@+id/tvHasilTglLahir" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="16sp" android:layout_marginBottom="8dp" android:text="Tgl Lahir: "/>
-    <TextView android:id="@+id/tvHasilGender" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="16sp" android:layout_marginBottom="8dp" android:text="Jenis Kelamin: "/>
-    <TextView android:id="@+id/tvHasilUsername" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="16sp" android:layout_marginBottom="24dp" android:text="Username: "/>
-
-    <Button
-        android:id="@+id/btnSubmit"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="SUBMIT"
-        android:backgroundTint="#6200EE"
-        android:textColor="#FFFFFF"
-        android:layout_marginBottom="8dp"/>
+        app:cardCornerRadius="20dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="@color/white"
+        android:layout_marginBottom="32dp">
 
-    <Button
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView android:id="@+id/tvHasilNama" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="16sp" android:layout_marginBottom="12dp" android:text="Nama: " android:textColor="@color/pink_secondary_variant" android:textStyle="bold"/>
+            <TextView android:id="@+id/tvHasilEmail" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="16sp" android:layout_marginBottom="12dp" android:text="Email: " android:textColor="@color/pink_secondary_variant" />
+            <TextView android:id="@+id/tvHasilTglLahir" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="16sp" android:layout_marginBottom="12dp" android:text="Tgl Lahir: " android:textColor="@color/pink_secondary_variant" />
+            <TextView android:id="@+id/tvHasilGender" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="16sp" android:layout_marginBottom="12dp" android:text="Jenis Kelamin: " android:textColor="@color/pink_secondary_variant" />
+            <TextView android:id="@+id/tvHasilUsername" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="16sp" android:text="Username: " android:textColor="@color/pink_secondary_variant" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="SUBMIT 💖"
+        app:cornerRadius="30dp"
+        android:backgroundTint="@color/pink_primary"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="12dp"
+        android:textStyle="bold"/>
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnKembali"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Kembali Ke Form"
-        android:backgroundTint="#E0E0E0"
-        android:textColor="#333333"/>
+        android:textColor="@color/pink_primary"
+        android:textStyle="bold"/>
 
 </LinearLayout>

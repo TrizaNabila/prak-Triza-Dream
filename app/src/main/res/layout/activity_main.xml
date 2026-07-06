@@ -4,13 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#F5F5F5">
+    android:background="@color/pink_background">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#6200EE"
+        android:background="@color/pink_primary"
         app:titleTextColor="#FFFFFF" />
 
     <ScrollView
@@ -28,11 +28,20 @@
                 android:id="@+id/txtWelcome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Welcome, Ms. Triza"
+                android:text="Welcome, Ms. Triza 💖"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="30dp"
-                android:textColor="#333333"/>
+                android:textColor="@color/pink_secondary_variant"/>
+
+            <Button
+                android:id="@+id/btnNotif"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="Materi Notification (P14)"
+                android:layout_marginBottom="12dp"
+                android:backgroundTint="@color/pink_primary"
+                app:icon="@android:drawable/ic_dialog_info" />
 
             <Button
                 android:id="@+id/btnRumus"
@@ -40,6 +49,7 @@
                 android:layout_height="70dp"
                 android:text="Kalkulator Rumus"
                 android:layout_marginBottom="12dp"
+                android:backgroundTint="@color/pink_secondary"
                 app:icon="@android:drawable/ic_menu_edit" />
 
             <Button
@@ -48,7 +58,7 @@
                 android:layout_height="70dp"
                 android:text="User Profile"
                 android:layout_marginBottom="12dp"
-                android:backgroundTint="#4CAF50"
+                android:backgroundTint="@color/pink_primary"
                 app:icon="@android:drawable/ic_menu_myplaces" />
 
             <Button
@@ -57,7 +67,7 @@
                 android:layout_height="70dp"
                 android:text="Dashboard Food"
                 android:layout_marginBottom="12dp"
-                android:backgroundTint="#FF9800"
+                android:backgroundTint="@color/pink_secondary"
                 app:icon="@android:drawable/ic_menu_gallery" />
 
             <Button
@@ -66,7 +76,7 @@
                 android:layout_height="70dp"
                 android:text="Bina Desa Website"
                 android:layout_marginBottom="40dp"
-                android:backgroundTint="#2196F3"
+                android:backgroundTint="@color/pink_primary"
                 app:icon="@android:drawable/ic_menu_search" />
 
             <Button
@@ -75,7 +85,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Logout Account"
-                android:textColor="#E91E63" />
+                android:textColor="@color/pink_secondary_variant"
+                android:textStyle="bold" />
 
         </LinearLayout>
     </ScrollView>

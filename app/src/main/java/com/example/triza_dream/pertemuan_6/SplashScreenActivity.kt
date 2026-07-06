@@ -6,7 +6,7 @@ import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import com.example.triza_dream.databinding.ActivitySplashScreenBinding
-import com.example.triza_dream.pertemuan_3.LoginActivity // Import LoginActivity
+import com.example.triza_dream.tutorial.TutorialMessageActivity
 
 class SplashScreenActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySplashScreenBinding
@@ -18,8 +18,8 @@ class SplashScreenActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         Handler(Looper.getMainLooper()).postDelayed({
-            // PINDAH KE LOGIN ACTIVITY
-            val intent = Intent(this@SplashScreenActivity, LoginActivity::class.java)
+            // PINDAH KE ONBOARDING
+            val intent = Intent(this@SplashScreenActivity, TutorialMessageActivity::class.java)
             startActivity(intent)
             finish()
         }, 3000)

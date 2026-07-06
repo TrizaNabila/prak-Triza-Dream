@@ -1,5 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Triza_Dream</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Dashboard Menu -->
+    <string name="menu_layanan_info">Layanan Info ✨</string>
+
+    <!-- TenthActivity (Tabs) -->
+    <string name="tabs_toolbar_title">Informasi &amp; Layanan</string>
+    <string name="tab_alur_title">Alur Pengajuan</string>
+    <string name="tab_syarat_title">Syarat Penerima</string>
+    <string name="tab_produk_title">Katalog Bansos</string>
+
+    <!-- Tab A (Alur) -->
+    <string name="alur_title">Alur Pengajuan Bansos 📝</string>
+    <string name="alur_desc">1. Daftar Akun\n2. Lengkapi Profil\n3. Ajukan Bantuan\n4. Verifikasi Data\n5. Pencairan Dana</string>
+
+    <!-- Tab B (Syarat) -->
+    <string name="syarat_title">Syarat Penerima Manfaat 🏠</string>
+    <string name="syarat_desc">• Warga Negara Indonesia (WNI)\n• Memiliki KTP &amp; KK Valid\n• Terdaftar di DTKS\n• Penghasilan di bawah rata-rata</string>
+
+    <!-- Pertemuan 14 Calculator -->
+    <string name="calc_title">✨ Triza Dream Calculator ✨</string>
+    <string name="calc_subtitle">Hitung Lingkaran &amp; Tabung 🌸</string>
+    <string name="hint_jari_jari">Masukkan Jari-jari (r)</string>
+    <string name="hint_tinggi">Masukkan Tinggi (t) - Khusus Tabung</string>
+    <string name="btn_hitung_lingkaran">HITUNG LUAS LINGKARAN 💅</string>
+    <string name="btn_hitung_tabung">HITUNG VOLUME TABUNG 💮</string>
+    <string name="hasil_label">Hasil Perhitungan:</string>
+    <string name="btn_kembali">KEMBALI</string>
 </resources>

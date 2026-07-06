@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="20dp"
-    android:background="#F5F5F5">
+    android:padding="32dp"
+    android:gravity="center_horizontal"
+    android:background="@color/pink_background">
 
     <TextView
         android:id="@+id/tvJudul"
@@ -14,90 +16,123 @@
         android:textSize="24sp"
         android:textStyle="bold"
         android:gravity="center"
-        android:textColor="#333333"
+        android:textColor="@color/pink_secondary_variant"
         android:layout_marginBottom="8dp"/>
 
     <TextView
         android:id="@+id/tvSubtitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hitung Lingkaran &amp; Tabung"
+        android:text="Hitung Lingkaran &amp; Tabung 🌸"
         android:textSize="16sp"
         android:gravity="center"
+        android:textColor="@color/pink_primary"
         android:layout_marginBottom="24dp"/>
 
-    <EditText
-        android:id="@+id/etJariJari"
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Masukkan Jari-jari (r)"
-        android:inputType="numberDecimal"
         android:layout_marginBottom="12dp"
-        android:padding="12dp"
-        android:background="@android:drawable/editbox_background"/>
+        android:hint="Masukkan Jari-jari (r)"
+        app:boxStrokeColor="@color/pink_primary"
+        app:hintTextColor="@color/pink_primary"
+        app:boxCornerRadiusBottomEnd="15dp"
+        app:boxCornerRadiusBottomStart="15dp"
+        app:boxCornerRadiusTopEnd="15dp"
+        app:boxCornerRadiusTopStart="15dp">
 
-    <EditText
-        android:id="@+id/etTinggi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Masukkan Tinggi (t) - Khusus Tabung"
-        android:inputType="numberDecimal"
-        android:layout_marginBottom="20dp"
-        android:padding="12dp"
-        android:background="@android:drawable/editbox_background"/>
-
-    <Button
-        android:id="@+id/btnLingkaran"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Hitung Luas Lingkaran"
-        android:backgroundTint="#2196F3"
-        android:textColor="#FFFFFF"
-        android:layout_marginBottom="10dp"/>
-
-    <Button
-        android:id="@+id/btnTabung"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Hitung Volume Tabung"
-        android:backgroundTint="#4CAF50"
-        android:textColor="#FFFFFF"
-        android:layout_marginBottom="20dp"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="#FFFFFF"
-        android:padding="16dp"
-        android:elevation="2dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hasil Perhitungan:"
-            android:textSize="14sp" />
-
-        <TextView
-            android:id="@+id/tvHasil"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etJariJari"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="0.00"
-            android:textSize="32sp"
-            android:textStyle="bold"
-            android:textColor="#E91E63"
-            android:gravity="center"
-            android:layout_marginTop="8dp"/>
-    </LinearLayout>
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:hint="Masukkan Tinggi (t) - Khusus Tabung"
+        app:boxStrokeColor="@color/pink_primary"
+        app:hintTextColor="@color/pink_primary"
+        app:boxCornerRadiusBottomEnd="15dp"
+        app:boxCornerRadiusBottomStart="15dp"
+        app:boxCornerRadiusTopEnd="15dp"
+        app:boxCornerRadiusTopStart="15dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etTinggi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLingkaran"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="HITUNG LUAS LINGKARAN 💖"
+        android:backgroundTint="@color/pink_primary"
+        android:textColor="#FFFFFF"
+        app:cornerRadius="30dp"
+        android:layout_marginBottom="12dp"
+        android:textStyle="bold"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnTabung"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="HITUNG VOLUME TABUNG 🌸"
+        android:backgroundTint="@color/pink_secondary"
+        android:textColor="#FFFFFF"
+        app:cornerRadius="30dp"
+        android:layout_marginBottom="24dp"
+        android:textStyle="bold"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hasil Perhitungan:"
+                android:textSize="14sp"
+                android:textColor="@color/gray_text" />
+
+            <TextView
+                android:id="@+id/tvHasil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:textColor="@color/pink_primary"
+                android:gravity="center"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnBackMain"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Kembali"
-        android:layout_gravity="center"
+        android:text="KEMBALI"
         android:layout_marginTop="30dp"
-        style="?android:attr/borderlessButtonStyle"
-        android:textColor="#757575"/>
+        android:textColor="@color/pink_primary"
+        android:textStyle="bold"/>
 
 </LinearLayout>

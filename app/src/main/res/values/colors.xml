@@ -2,4 +2,22 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Cute Pink Theme Colors -->
+    <color name="pink_primary">#F06292</color>
+    <color name="pink_primary_variant">#D81B60</color>
+    <color name="pink_on_primary">#FFFFFF</color>
+
+    <color name="pink_secondary">#F48FB1</color>
+    <color name="pink_secondary_variant">#AD1457</color>
+    <color name="pink_on_secondary">#FFFFFF</color>
+
+    <color name="pink_background">#FCE4EC</color>
+    <color name="pink_surface">#FFFFFF</color>
+    <color name="pink_error">#B00020</color>
+
+    <!-- Accent Colors -->
+    <color name="cute_pink_light">#FFF1F8</color>
+    <color name="cute_pink_dark">#880E4F</color>
+    <color name="gray_text">#888888</color>
 </resources>
